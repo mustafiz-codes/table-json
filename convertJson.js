@@ -3,10 +3,9 @@ const axios = require("axios");
 async function fetchAndConvertJson() {
   try {
     // Replace the URL with your target URL
-    // https://docs.google.com/spreadsheets/d/1VLlL9BJ0nTukqV5m49qLLTFmu3VanJHXEB_SDETDPRg/edit#gid=1777816807
-    // "https://spreadsheets.google.com/feeds/list/1VLlL9BJ0nTukqV5m49qLLTFmu3VanJHXEB_SDETDPRg/od6/public/values?alt=json";
+    
     const url =
-      "GET https://sheets.googleapis.com/v4/spreadsheets/1VLlL9BJ0nTukqV5m49qLLTFmu3VanJHXEB_SDETDPRg/values    ";
+      "GET https://sheets.googleapis.com/v4/spreadsheets/<id>/values    ";
     const response = await axios.get(url);
 
     // Assuming you want to simplify the structure or convert it in some specific way
